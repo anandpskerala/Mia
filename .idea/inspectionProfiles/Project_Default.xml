@@ -1,0 +1,95 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="1222" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="src" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="background" />
+            <item index="7" class="java.lang.String" itemvalue="custom" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="32">
+            <item index="0" class="java.lang.String" itemvalue="aiohttp" />
+            <item index="1" class="java.lang.String" itemvalue="speedtest-cli" />
+            <item index="2" class="java.lang.String" itemvalue="requests" />
+            <item index="3" class="java.lang.String" itemvalue="oauth2client" />
+            <item index="4" class="java.lang.String" itemvalue="protobuf" />
+            <item index="5" class="java.lang.String" itemvalue="googleapis-common-protos" />
+            <item index="6" class="java.lang.String" itemvalue="httplib2" />
+            <item index="7" class="java.lang.String" itemvalue="aiohttp_jinja2" />
+            <item index="8" class="java.lang.String" itemvalue="pyasn1-modules" />
+            <item index="9" class="java.lang.String" itemvalue="requests-oauthlib" />
+            <item index="10" class="java.lang.String" itemvalue="certifi" />
+            <item index="11" class="java.lang.String" itemvalue="oauthlib" />
+            <item index="12" class="java.lang.String" itemvalue="google-auth-httplib2" />
+            <item index="13" class="java.lang.String" itemvalue="pip-autoremove" />
+            <item index="14" class="java.lang.String" itemvalue="urllib3" />
+            <item index="15" class="java.lang.String" itemvalue="google-api-core" />
+            <item index="16" class="java.lang.String" itemvalue="uritemplate" />
+            <item index="17" class="java.lang.String" itemvalue="dnspython" />
+            <item index="18" class="java.lang.String" itemvalue="pymongo" />
+            <item index="19" class="java.lang.String" itemvalue="google-auth-oauthlib" />
+            <item index="20" class="java.lang.String" itemvalue="aiofiles" />
+            <item index="21" class="java.lang.String" itemvalue="humanfriendly" />
+            <item index="22" class="java.lang.String" itemvalue="TgCrypto" />
+            <item index="23" class="java.lang.String" itemvalue="attrs" />
+            <item index="24" class="java.lang.String" itemvalue="cachetools" />
+            <item index="25" class="java.lang.String" itemvalue="Pyrogram" />
+            <item index="26" class="java.lang.String" itemvalue="multidict" />
+            <item index="27" class="java.lang.String" itemvalue="google-api-python-client" />
+            <item index="28" class="java.lang.String" itemvalue="yarl" />
+            <item index="29" class="java.lang.String" itemvalue="pytz" />
+            <item index="30" class="java.lang.String" itemvalue="google-auth" />
+            <item index="31" class="java.lang.String" itemvalue="python-telegram-bot" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N813" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="str.decode" />
+          <option value="property.setter" />
+          <option value="telethon.client.telegramclient.TelegramClient.__await__" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,25 @@
+# Telegram Credentials
+bot_token: "" # Bot Token
+api_id: 0 # Get from my.telegram.org
+api_hash: "" # Get from my.telegram.org
+owner_id: 123456 # Owner's Telegram account ID
+
+# Database
+database_url: "postgres://username:password@host:5432/database_name" # Database URL
+
+# Permissions
+sudo_users: [] # List of the Telegram IDs of sudo users
+whitelist_users: [] # List of the Telegram IDs of whitelisted users
+
+# Workdir
+
+work_dir: "mia/workdir" # Directory to store the session file
+
+#Plugins
+disabled_plugins: []
+
+#Command Prefix
+prefixes: ["/", "!"]
+
+#Parse Mode
+parse_mode: "markdown"
