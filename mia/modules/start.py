@@ -1,21 +1,40 @@
+from typing import Union
 from pyrogram import Client, filters
-from pyrogram.types import Message
+from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 from mia import CONFIG
 from mia.modules.localization import tld
 
 
 @Client.on_message(filters.command("start", prefixes=CONFIG.prefixes))
-async def start_menu(c: Client, m: Message):
-    chat = m.chat
+@Client.on_callback_query(filters.regex("^start_back$"))
+async def start_menu(c: Client, m: Union[Message, CallbackQuery]):
+    if isinstance(m, CallbackQuery):
+        await m.answer()
+        msg = m.message
+        method = m.edit_message_text
+        chat = m.message.chat
+    else:
+        msg = m
+        method = m.reply_text
+        chat = m.chat
     if chat.type != "private":
-        await m.reply_text(
-            tld(chat.id, "private_start"),
-            quote=True
+        await method(
+            tld(chat.id, "group_start")
         )
     else:
         bot = await c.get_me()
-        await m.reply_text(
+        buttons = [
+            [
+                InlineKeyboardButton(tld(chat.id, "help"), callback_data="get_help")
+            ],
+            [
+                InlineKeyboardButton(tld(chat.id, "support_grp"), url="https://t.me/Mia_support"),
+                InlineKeyboardButton(tld(chat.id, "support_chnl"), url="https://t.me/KeralaBotsNews")
+            ]
+        ]
+        markup = InlineKeyboardMarkup(buttons)
+        await method(
             tld(chat.id, "start_text").format(m.from_user.first_name, bot.first_name),
-            quote=True
+            reply_markup=markup
         )

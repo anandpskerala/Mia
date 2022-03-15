@@ -24,7 +24,7 @@ def tld(chat_id, text):
         result = decode(
             encode(
                 lang_strings[language][text],
-                'latin-1',
+                'utf-8',
                 'backslashreplace'
             ),
             "unicode-escape"
@@ -34,7 +34,7 @@ def tld(chat_id, text):
             result = decode(
                 encode(
                     lang_strings["en-US"][text],
-                    'latin-1',
+                    'utf-8',
                     'backslashreplace'
                 ),
                 "unicode-escape"
