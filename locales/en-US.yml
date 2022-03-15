@@ -1,8 +1,10 @@
 start_text: |
   Hi **{}**, my name is **{}** !
   I am a modular group management bot.
-  You can find the list of available commands with /help
+  You can find the list of available commands by clicking the Help button
   
   [\uD83D\uDCAC Support group](https://t.me/Mia_support)
   
   [\uD83C\uDF10 Support Channel](https://t.me/KeralaBotsNews)
+
+private_start: Yep I'm here, PM me if you have any questions on how to use me!
