@@ -40,7 +40,7 @@ def tl(chat_id, text):
                 "unicode-escape"
             )
         else:
-            result = f"No string found for {text}.\nReport it in @HarukaAyaGroup."
+            result = f"No string found for {text}.\nReport it in @KeralasBots."
             logging.warning(result)
 
     return result
