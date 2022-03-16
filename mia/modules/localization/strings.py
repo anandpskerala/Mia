@@ -18,7 +18,7 @@ for lang in os.listdir("locales"):
 logging.info("Loaded %d languages: %s", len(locale_codes), str(locale_codes))
 
 
-def tld(chat_id, text):
+def tl(chat_id, text):
     language = "en-US"
     if language and language in locale_codes and text in lang_strings[language]:
         result = decode(

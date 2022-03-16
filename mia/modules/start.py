@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 from mia import CONFIG
-from mia.modules.localization import tld
+from mia.modules.localization import tl
 
 
 @Client.on_message(filters.command("start", prefixes=CONFIG.prefixes))
@@ -20,21 +20,21 @@ async def start_menu(c: Client, m: Union[Message, CallbackQuery]):
         chat = m.chat
     if chat.type != "private":
         await method(
-            tld(chat.id, "group_start")
+            tl(chat.id, "group_start")
         )
     else:
         bot = await c.get_me()
         buttons = [
             [
-                InlineKeyboardButton(tld(chat.id, "help"), callback_data="get_help")
+                InlineKeyboardButton(tl(chat.id, "help"), callback_data="get_help")
             ],
             [
-                InlineKeyboardButton(tld(chat.id, "support_grp"), url="https://t.me/Mia_support"),
-                InlineKeyboardButton(tld(chat.id, "support_chnl"), url="https://t.me/KeralaBotsNews")
+                InlineKeyboardButton(tl(chat.id, "support_grp"), url="https://t.me/Mia_support"),
+                InlineKeyboardButton(tl(chat.id, "support_chnl"), url="https://t.me/KeralaBotsNews")
             ]
         ]
         markup = InlineKeyboardMarkup(buttons)
         await method(
-            tld(chat.id, "start_text").format(m.from_user.first_name, bot.first_name),
+            tl(chat.id, "start_text").format(m.from_user.first_name, bot.first_name),
             reply_markup=markup
         )

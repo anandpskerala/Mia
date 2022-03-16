@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 from mia import CONFIG
-from mia.modules.localization import tld
+from mia.modules.localization import tl
 
 
 @Client.on_message(filters.command("help", prefixes=CONFIG.prefixes))
@@ -24,20 +24,20 @@ async def get_help_menu(c: Client, m: Union[Message, CallbackQuery]):
         button = [
             [
                 InlineKeyboardButton(
-                    tld(chat.id, "help"),
+                    tl(chat.id, "help"),
                     url=f'https://t.me/{bot.username}?start=start'
                 )
             ]
         ]
 
         markup = InlineKeyboardMarkup(button)
-        text = tld(chat.id, "group_help")
+        text = tl(chat.id, "group_help")
     else:
         button = [
             [
-                InlineKeyboardButton(tld(chat.id, "back"), callback_data="start_back")
+                InlineKeyboardButton(tl(chat.id, "back"), callback_data="start_back")
             ]
         ]
         markup = InlineKeyboardMarkup(button)
-        text = tld(chat.id, "help_text")
+        text = tl(chat.id, "help_text")
     await method(text, reply_markup=markup)

@@ -1,3 +1,3 @@
-from .strings import tld
+from .strings import tl
 
-__all__ = ["tld"]
+__all__ = ["tl"]
