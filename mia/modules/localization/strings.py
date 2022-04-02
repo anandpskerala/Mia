@@ -10,10 +10,11 @@ lang_strings = {}
 
 for lang in os.listdir("locales"):
     if os.path.isdir(f"locales/{lang}"):
-        continue
-    lang = lang.replace(".yml", '')
-    locale_codes.append(lang)
-    lang_strings[lang] = yaml.full_load(open(f"locales/{lang}.yml", "r"))
+        locale_codes.append(lang)
+        lang_strings[lang] = {}
+        for lang_file in os.listdir(f"locales/{lang}"):
+            lang_strings[lang].update(yaml.full_load(open(f"locales/{lang}/{lang_file}", "rb")))
+
 
 logging.info("Loaded %d languages: %s", len(locale_codes), str(locale_codes))
 
@@ -24,7 +25,7 @@ def tl(chat_id, text):
         result = decode(
             encode(
                 lang_strings[language][text],
-                'utf-8',
+                'latin-1',
                 'backslashreplace'
             ),
             "unicode-escape"
@@ -34,7 +35,7 @@ def tl(chat_id, text):
             result = decode(
                 encode(
                     lang_strings["en-US"][text],
-                    'utf-8',
+                    'latin-1',
                     'backslashreplace'
                 ),
                 "unicode-escape"

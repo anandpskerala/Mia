@@ -19,7 +19,7 @@ async def main():
         logging.error(
             f"Could not initialize Telegram client due to a {type(e).__name__}: {e}"
         )
-        exit(1)
+        quit()
 
 if __name__ == '__main__':
     if not os.path.exists(CONFIG.work_dir):

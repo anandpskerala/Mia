@@ -31,6 +31,10 @@ async def start_menu(c: Client, m: Union[Message, CallbackQuery]):
             [
                 InlineKeyboardButton(tl(chat.id, "support_grp"), url="https://t.me/Mia_support"),
                 InlineKeyboardButton(tl(chat.id, "support_chnl"), url="https://t.me/KeralaBotsNews")
+            ],
+            [
+                InlineKeyboardButton(f'{tl(chat.id, "language_flag")} {tl(chat.id, "language_string")}'
+                                     , callback_data="get_lang")
             ]
         ]
         markup = InlineKeyboardMarkup(buttons)
