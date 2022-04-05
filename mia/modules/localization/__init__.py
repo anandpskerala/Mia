@@ -1,3 +1,3 @@
-from .strings import tl, locale_codes, lang_strings
+from .strings import tl, gen_langs_kb
 
-__all__ = ["tl", "locale_codes", "lang_strings"]
+__all__ = ["tl", "gen_langs_kb"]

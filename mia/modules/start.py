@@ -4,6 +4,7 @@ from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineK
 
 from mia import CONFIG
 from mia.modules.localization import tl
+from mia.database.users import insert_user, get_user
 
 
 @Client.on_message(filters.command("start", prefixes=CONFIG.prefixes))
@@ -18,6 +19,8 @@ async def start_menu(c: Client, m: Union[Message, CallbackQuery]):
         msg = m
         method = m.reply_text
         chat = m.chat
+    user = msg.from_user
+    insert_user(str(user.id), user.username, str(user.dc_id))
     if chat.type != "private":
         await method(
             tl(chat.id, "group_start")

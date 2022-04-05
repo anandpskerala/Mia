@@ -1,0 +1,6 @@
+language_string: 'ഭാഷ'
+change_language: |
+  **നിലവിലെ ഭാഷ :** `മലയാളം (IN)`
+  
+  പുതിയ ഭാഷ സജ്ജമാക്കുക:
+changed_language: ഭാഷ {}-ലേക്ക് മാറ്റി

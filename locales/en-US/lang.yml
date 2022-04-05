@@ -3,3 +3,4 @@ change_language: |
   **Current Language :** `ENGLISH (US)`
   
   Set new language :
+changed_language: Successfully changed language to {}
