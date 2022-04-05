@@ -5,7 +5,7 @@ api_hash: "" # Get from my.telegram.org
 owner_id: 123456 # Owner's Telegram account ID
 
 # Database
-database_url: "postgres://username:password@host:5432/database_name" # Database URL
+database_url: "mongodb+srv://username:password@host:5432/database" # Database URL
 
 # Permissions
 sudo_users: [] # List of the Telegram IDs of sudo users
