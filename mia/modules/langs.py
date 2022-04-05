@@ -10,7 +10,6 @@ from mia.database.langs import update_lang
 @Client.on_message(filters.command("setlang", prefixes=CONFIG.prefixes))
 @Client.on_callback_query(filters.regex("^get_lang$"))
 async def get_lang_menu(c: Client, m: Union[Message, CallbackQuery]):
-
     if isinstance(m, CallbackQuery):
         await m.answer()
         msg = m.message
@@ -34,7 +33,7 @@ async def get_lang_menu(c: Client, m: Union[Message, CallbackQuery]):
 
 
 @Client.on_callback_query(filters.regex("^setlang_.*"))
-async def get_lang_menu(c: Client, m: CallbackQuery):
+async def set_lang_menu(c: Client, m: CallbackQuery):
     _, lang = m.data.split("_", 1)
     await m.answer()
     msg = m.message
