@@ -25,7 +25,7 @@ logging.info("Loaded %d languages: %s", len(locale_codes), str(locale_codes))
 
 def tl(chat_id, text):
     language = get_lang_code(str(chat_id))
-    if language and language in locale_codes and lang_strings[language].get(text) is not None:
+    if language in locale_codes and lang_strings[language].get(text) is not None:
         result = decode(
             encode(
                 lang_strings[language][text],
@@ -35,18 +35,8 @@ def tl(chat_id, text):
             "unicode-escape"
         )
     else:
-        if lang_strings["en-US"].get(text) is not None:
-            result = decode(
-                encode(
-                    lang_strings["en-US"][text],
-                    'latin-1',
-                    'backslashreplace'
-                ),
-                "unicode-escape"
-            )
-        else:
-            result = f"No string found for {text}.\nReport it in @KeralasBots."
-            logging.warning(result)
+        result = f"No string found for {text}.\nReport it in @KeralasBots."
+        logging.warning(result)
 
     return result
 

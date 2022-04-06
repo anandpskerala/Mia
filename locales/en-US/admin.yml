@@ -1,0 +1,2 @@
+user_not_admin: 'Your not an Admin in this chat. So you are not allowed to do that'
+bot_not_admin: "I can't do that! I am not an admin here"

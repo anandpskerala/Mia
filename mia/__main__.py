@@ -19,6 +19,7 @@ async def main():
         logging.error(
             f"Could not initialize Telegram client due to a {type(e).__name__}: {e}"
         )
+        traceback.print_exc()
         quit()
 
 if __name__ == '__main__':

@@ -23,3 +23,6 @@ prefixes: ["/", "!"]
 
 #Parse Mode
 parse_mode: "markdown"
+
+#Default Language for the bot
+default_lang: "en-US"
