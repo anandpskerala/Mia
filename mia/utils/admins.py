@@ -32,8 +32,8 @@ def admin_check(func):
         if isinstance(m, CallbackQuery):
             msg = m.message
             chat = msg.chat
-            user = msg.from_user
-            method = m.answer
+            user = m.from_user
+            method = partial(m.answer, show_alert=True)
         else:
             msg = m
             chat = m.chat
