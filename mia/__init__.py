@@ -24,7 +24,7 @@ class MiaConfig(BaseModel):
     disabled_plugins: List[str]
     prefixes: List[str]
     parse_mode: str
-    default_lang : str
+    default_lang: str
 
 
 logging.basicConfig(

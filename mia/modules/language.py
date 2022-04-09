@@ -5,7 +5,7 @@ from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineK
 from mia import CONFIG
 from mia.modules.localization import tl, gen_langs_kb
 from mia.database.langs import update_lang
-from mia.utils.admins import admin_check
+from mia.utils import admin_check
 
 
 @Client.on_message(filters.command("setlang", prefixes=CONFIG.prefixes))
