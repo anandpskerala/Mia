@@ -18,9 +18,17 @@ async def is_bot_admin(chat: Chat, bot: Client):
 
 async def is_user_admin(chat: Chat, user_id: int):
     chat_member = await chat.get_member(user_id)
-    if chat_member.status in ['administrator', 'creator']:
+    if chat_member.status in ['administrator', 'creator'] or user_id in CONFIG.sudo_users:
         return True
     elif chat_member.is_anonymous:
+        return True
+    else:
+        return False
+
+
+async def is_user_chat_owner(chat: Chat, user_id: int):
+    chat_member = await chat.get_member(user_id)
+    if chat_member.status == 'creator' or user_id in CONFIG.sudo_users:
         return True
     else:
         return False
@@ -50,3 +58,30 @@ def admin_check(func):
         else:
             return await method(tl(chat.id, "bot_not_admin"))
     return wrapper
+
+
+def chat_owner_only(func):
+    @wraps(func)
+    async def wrapper(c: Client, m: Union[Message, CallbackQuery], *args, **kwargs):
+        if isinstance(m, CallbackQuery):
+            msg = m.message
+            chat = msg.chat
+            user = m.from_user
+            method = partial(m.answer, show_alert=True)
+        else:
+            msg = m
+            chat = m.chat
+            user = msg.from_user
+            method = m.reply_text
+        if chat.type == "private":
+            return await func(c, m, *args, **kwargs)
+
+        if await is_bot_admin(chat, c):
+            if await is_user_chat_owner(chat, user.id):
+                return await func(c, m, *args, **kwargs)
+            else:
+                return await method(tl(chat.id, "unauthorized_user"))
+        else:
+            return await method(tl(chat.id, "bot_not_admin"))
+    return wrapper
+

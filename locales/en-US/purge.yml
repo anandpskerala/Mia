@@ -1,0 +1,2 @@
+starting_purge: 'Purging...'
+purge_success: 'Deleted {count} messages'

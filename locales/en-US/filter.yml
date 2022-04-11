@@ -1,0 +1,7 @@
+filter_content_empty: 'Please specify a content for filter.'
+successfully_added_filter: 'Successfully added filter **{trigger}** to **{chat_name}**.'
+all_filters_text: 'Total number of filters in **{chat_name}** : {count}\n\n'
+del_filter_args_not_found: '__Mention the filter which you wanna delete!__\n\n`/delfilter filtername`'
+successfully_deleted_filter: "Successfully deleted `{filter}`. I'll not respond to that filter anymore."
+deleted_all_filters: 'Successfully deleted `{count}` filters'
+no_filter_found: 'There is no filter present found in this chat'

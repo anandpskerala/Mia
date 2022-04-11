@@ -1,0 +1,7 @@
+filter_content_empty: 'ഫിൽട്ടറിനായി ഒരു ഉള്ളടക്കം വ്യക്തമാക്കുക.'
+successfully_added_filter: '**{chat_name}** എന്നാ ചാറ്റിലേക്ക് **{trigger}** എന്നാ ഫിൽട്ടർ വിജകരമായി ചേർത്തു.'
+all_filters_text: '**{chat_name}**-ലെ മൊത്തം ഫിൽട്ടറുകളുടെ എണ്ണം: {count}\n\n'
+del_filter_args_not_found: '__നിങ്ങൾ ഡിലീറ്റ് ചെയ്യാൻ ആഗ്രഹിക്കുന്ന ഫിൽട്ടർ മെൻഷൻ ചെയ്യുക!__\n\n`/delfilter filtername`'
+successfully_deleted_filter: '`{filter}` എന്ന ഫിൽറ്റർ വിജയകരമായി ഡിലീറ്റ് ചെയ്തു. ആ ഫിൽട്ടറിനോട് ഞാൻ ഇനി പ്രതികരിക്കില്ല.'
+deleted_all_filters: 'വിജകരമായി `{count}` ഫിൽട്ടറുകൾ ഡിലീറ്റ് ചെയ്തു'
+no_filter_found: 'ഈ ചാറ്റിൽ നിലവിൽ ഒരു ഫിൽട്ടറും ഇല്ല'

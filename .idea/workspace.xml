@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a128728-ff4d-4a25-a9ae-6faba127079e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/locales/en-US/filter.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/en-US/help.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/en-US/purge.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/en-US/url.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/filter.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/help.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/purge.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/url.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/modules/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/modules/purge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/modules/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Mia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mia.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-US/admin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/admin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-US/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/general.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ml/admin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/admin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ml/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/general.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/database/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/database/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/database/langs.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/database/langs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/database/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/database/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/localization/strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/localization/strings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/utils/admins.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/admins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="All" color="Rose" />
+    <fileColor scope="Project Files" color="00ff25" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27YwAqA14MCFpBp6MVRZ16AZ6zv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/locales/ml" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.21283096" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Bots\Mia\locales\ml" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a128728-ff4d-4a25-a9ae-6faba127079e" name="Changes" comment="" />
+      <created>1649510188327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649510188327</updated>
+      <workItem from="1649510208717" duration="236000" />
+      <workItem from="1649510488998" duration="1505000" />
+      <workItem from="1649564883181" duration="1238000" />
+      <workItem from="1649573723313" duration="6375000" />
+      <workItem from="1649586396831" duration="1463000" />
+      <workItem from="1649588653444" duration="2647000" />
+      <workItem from="1649659475910" duration="6060000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

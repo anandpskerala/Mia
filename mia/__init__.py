@@ -25,6 +25,7 @@ class MiaConfig(BaseModel):
     prefixes: List[str]
     parse_mode: str
     default_lang: str
+    filter_dump_chat: int
 
 
 logging.basicConfig(

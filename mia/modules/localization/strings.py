@@ -48,7 +48,7 @@ def gen_langs_kb():
     
     kb = list(zip(keyboards[::2], keyboards[1::2]))
 
-    if len(keyboards) %2 == 1:
+    if len(keyboards) % 2 == 1:
         kb.append((keyboards[-1],))
 
     return kb

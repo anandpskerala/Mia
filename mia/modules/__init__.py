@@ -1,3 +1,4 @@
+import os
 import glob
 import logging
 from os.path import dirname, basename, isfile
@@ -9,14 +10,16 @@ def _all_modules():
     """
     To get the list of all modules
     """
-
-    paths = glob.glob(dirname(__file__) + "/*.py")
-    all_modules = sorted(
-        [
-            basename(f)[:-3] for f in paths if isfile(f) and f.endswith(".py") and not f.endswith('__init__.py') and
-                                               not f.endswith('__main__.py')
-        ]
-    )
+    not_modules = ["localization", "__init__.py", "__main__.py", "__pycache__"]
+    paths = glob.glob(dirname(__file__) + "/*")
+    all_modules = []
+    for f in paths:
+        if basename(f) in not_modules:
+            continue
+        elif isfile(f) and f.endswith(".py"):
+            all_modules.append(basename(f)[:-3])
+        else:
+            all_modules.append(basename(f))
 
     if CONFIG.disabled_plugins:
         all_modules = list(
@@ -26,7 +29,7 @@ def _all_modules():
             )
         )
 
-    return all_modules
+    return sorted(all_modules)
 
 
 MODULES = _all_modules()

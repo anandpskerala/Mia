@@ -5,7 +5,7 @@ lang_collection = MDB().db.langs
 
 
 def update_lang(chat_id: str, lang: str):
-    if lang_collection.count_documents({"_id": chat_id}) > 0:
+    if lang_collection.find_one({"_id": chat_id}) is not None:
         lang_collection.update_one(
             {"_id": chat_id},
             {"$set": {"lang": lang}}

@@ -4,7 +4,7 @@ start_text: |
   
   You can find the list of available commands by clicking the Help button or by using /help command
   
-  [\uD83D\uDCAC Support group](https://t.me/Mia_support)
+  [\uD83D\uDCAC Support group](https://t.me/KeralasBots)
   
   [\uD83C\uDF10 Support Channel](https://t.me/KeralaBotsNews)
 
@@ -16,7 +16,17 @@ support_grp: '💬 Support group'
 support_chnl: '🌐 Support Channel'
 back: '🔙 Back'
 
-group_help: Contact me at Pm for help
+group_help: 'Contact me at Pm for help'
 
 help_text: |
-  hola amigo
+  Hey! My name is {botname}. I am a group management bot, here to help you get around and keep the order in your groups!
+  
+  I have lots of handy features, such as flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
+  
+  Helpful commands:
+  - /start: Starts me! You've probably already used this.
+  - /help: Sends this message; I'll tell you more about myself!
+  
+  If you have any bugs or questions on how to use me, head to @KeralasBots.
+  
+  All commands can be used with the following: / !

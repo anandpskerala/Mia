@@ -3,3 +3,4 @@ pydantic
 pyrogram
 TgCrypto
 pymongo[srv]
+aiohttp

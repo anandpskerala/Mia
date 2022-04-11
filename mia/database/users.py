@@ -11,7 +11,7 @@ class Users(BaseModel):
 
 
 def insert_user(user_id: str, user_name: str, dc_id: str):
-    if user_collection.count_documents({"user_id": user_id}) > 0:
+    if user_collection.find_one({"user_id": user_id}) is not None:
         return False
     else:
         user_collection.insert_one(

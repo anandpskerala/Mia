@@ -32,7 +32,7 @@ async def start_menu(c: Client, m: Union[Message, CallbackQuery]):
                 InlineKeyboardButton(tl(chat.id, "help"), callback_data="get_help")
             ],
             [
-                InlineKeyboardButton(tl(chat.id, "support_grp"), url="https://t.me/Mia_support"),
+                InlineKeyboardButton(tl(chat.id, "support_grp"), url="https://t.me/KeralasBots"),
                 InlineKeyboardButton(tl(chat.id, "support_chnl"), url="https://t.me/KeralaBotsNews")
             ],
             [

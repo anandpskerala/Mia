@@ -15,6 +15,8 @@ from mia import CONFIG
 # match ` (code)
 # match []() (markdown link)
 # else, escape *, _, `, and [
+from mia.database.filters import get_all_filters
+
 MATCH_MD = re.compile(r'\*(.*?)\*|'
                       r'_(.*?)_|'
                       r'`(.*?)`|'
@@ -32,13 +34,8 @@ SMART_CLOSE = "”"
 START_CHAR = ("'", '"', SMART_OPEN)
 
 
-def button_markdown_parser(msg: Message, keyword: str) -> (str, List):
-    text = None
-    if msg.media:
-        if msg.caption:
-            text = msg.caption.html
-    else:
-        text = msg.text.html
+def button_markdown_parser(msg: str, keyword: str):
+    text = msg
     buttons = []
     note_data = ""
     alerts = []
@@ -49,9 +46,6 @@ def button_markdown_parser(msg: Message, keyword: str) -> (str, List):
         args = text.split(None, 2)
         # use python's maxsplit to separate cmd and args
         text = args[2]
-
-    if "buttonalert" in text:
-        text = (text.replace("\n", "\\n").replace("\t", "\\t"))
 
     prev = 0
     i = 0
@@ -99,11 +93,7 @@ def button_markdown_parser(msg: Message, keyword: str) -> (str, List):
             prev = match.start(1) - 1
     else:
         note_data += text[prev:]
-
-    try:
-        return note_data, buttons, alerts
-    except:
-        return note_data, buttons, None
+    return note_data, buttons, alerts if len(alerts) != 0 else None
 
 
 def format_welcome_caption(html_string, chat_member, chat):
@@ -154,3 +144,12 @@ def split_quotes(text: str) -> List:
             key = text[0] + text[0]
         return list(filter(None, [key, rest]))
     return text.split(None, 1)
+
+
+def check_for_filters(chat_id: str, trigger: str):
+    all_filters = get_all_filters(chat_id)
+    for keywords in all_filters:
+        keyword = keywords.trigger
+        if trigger == keyword:
+            return True
+    return False
