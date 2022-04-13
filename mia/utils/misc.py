@@ -16,6 +16,7 @@ from mia import CONFIG
 # match []() (markdown link)
 # else, escape *, _, `, and [
 from mia.database.filters import get_all_filters
+from mia.database.notes import get_all_notes
 
 MATCH_MD = re.compile(r'\*(.*?)\*|'
                       r'_(.*?)_|'
@@ -34,7 +35,7 @@ SMART_CLOSE = "”"
 START_CHAR = ("'", '"', SMART_OPEN)
 
 
-def button_markdown_parser(msg: str, keyword: str):
+def button_markdown_parser(msg: str, keyword: str, typo: str):
     text = msg
     buttons = []
     note_data = ""
@@ -66,12 +67,12 @@ def button_markdown_parser(msg: str, keyword: str):
                 if bool(match.group(5)) and buttons:
                     buttons[-1].append(InlineKeyboardButton(
                         text=match.group(2),
-                        callback_data=f"alertmessage:{i}:{keyword}"
+                        callback_data=f"alert:{typo}:{i}:{keyword}"
                     ))
                 else:
                     buttons.append([InlineKeyboardButton(
                         text=match.group(2),
-                        callback_data=f"alertmessage:{i}:{keyword}"
+                        callback_data=f"alert:{typo}:{i}:{keyword}"
                     )])
                 i = i + 1
                 alerts.append(match.group(4))
@@ -149,6 +150,15 @@ def split_quotes(text: str) -> List:
 def check_for_filters(chat_id: str, trigger: str):
     all_filters = get_all_filters(chat_id)
     for keywords in all_filters:
+        keyword = keywords.trigger
+        if trigger == keyword:
+            return True
+    return False
+
+
+def check_for_notes(chat_id: str, trigger: str):
+    all_notes = get_all_notes(chat_id)
+    for keywords in all_notes:
         keyword = keywords.trigger
         if trigger == keyword:
             return True

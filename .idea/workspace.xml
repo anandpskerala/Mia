@@ -2,37 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a128728-ff4d-4a25-a9ae-6faba127079e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/locales/en-US/filter.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/en-US/help.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/en-US/purge.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/en-US/url.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ml/filter.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ml/help.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ml/purge.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ml/url.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/modules/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/modules/purge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/modules/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Mia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mia.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en-US/admin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/admin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en-US/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/general.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ml/admin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/admin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ml/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/general.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/database/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/database/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/database/langs.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/database/langs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/database/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/database/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/modules/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/modules/localization/strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/localization/strings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/modules/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/en-US/note.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/note.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/database/notes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/modules/notes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-US/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/help.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-US/url.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/url.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ml/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/help.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ml/url.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/url.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/utils/admins.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/admins.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +64,11 @@
       <workItem from="1649573723313" duration="6375000" />
       <workItem from="1649586396831" duration="1463000" />
       <workItem from="1649588653444" duration="2647000" />
-      <workItem from="1649659475910" duration="6060000" />
+      <workItem from="1649659475910" duration="6794000" />
+      <workItem from="1649683125826" duration="960000" />
+      <workItem from="1649688229771" duration="358000" />
+      <workItem from="1649770140183" duration="500000" />
+      <workItem from="1649824220003" duration="3628000" />
     </task>
     <servers />
   </component>

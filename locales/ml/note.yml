@@ -1,0 +1,7 @@
+filter_content_empty: 'നോട്ടിനായി ഒരു ഉള്ളടക്കം വ്യക്തമാക്കുക.'
+successfully_added_filter: '**{chat_name}** എന്നാ ചാറ്റിലേക്ക് **{trigger}** എന്നാ നോട്ട് വിജകരമായി ചേർത്തു.'
+all_filters_text: '**{chat_name}**-ലെ മൊത്തം നോട്ടുകളുടെ എണ്ണം: {count}\n\n'
+del_filter_args_not_found: '__നിങ്ങൾ ഡിലീറ്റ് ചെയ്യാൻ ആഗ്രഹിക്കുന്ന നോട്ട് മെൻഷൻ ചെയ്യുക!__\n\n`/delnote notename`'
+successfully_deleted_filter: '`{filter}` എന്ന നോട്ട് വിജയകരമായി ഡിലീറ്റ് ചെയ്തു. ആ നോട്ടിനോട് ഞാൻ ഇനി പ്രതികരിക്കില്ല.'
+deleted_all_filters: 'വിജകരമായി `{count}` നോട്ടുകൾ ഡിലീറ്റ് ചെയ്തു'
+no_filter_found: 'ഈ ചാറ്റിൽ നിലവിൽ ഒരു നോട്ടും ഇല്ല'

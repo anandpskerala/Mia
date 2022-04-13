@@ -5,6 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, CallbackQuery
 from mia import CONFIG
 from mia.database.filters import add_filter, get_all_filters, count_filters, delete_filter, delete_all_filters, find_filter_one
+from mia.database.notes import find_one_note
 from mia.modules.localization import tl
 from mia.utils import split_quotes, admin_check, button_markdown_parser, check_for_filters, chat_owner_only
 
@@ -27,7 +28,7 @@ async def add_filter_command(c: Client, m: Message):
             if m.reply_to_message.caption is not None
             else None
         )
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_photo(
             chat_id=CONFIG.filter_dump_chat,
             photo=file_id,
@@ -44,7 +45,7 @@ async def add_filter_command(c: Client, m: Message):
             if m.reply_to_message.caption is not None
             else None
         )
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_document(
             chat_id=CONFIG.filter_dump_chat,
             document=file_id,
@@ -62,7 +63,7 @@ async def add_filter_command(c: Client, m: Message):
             if m.reply_to_message.caption is not None
             else None
         )
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_video(
             chat_id=CONFIG.filter_dump_chat,
             video=file_id,
@@ -80,7 +81,7 @@ async def add_filter_command(c: Client, m: Message):
             if m.reply_to_message.caption is not None
             else None
         )
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_audio(
             chat_id=CONFIG.filter_dump_chat,
             audio=file_id,
@@ -97,7 +98,7 @@ async def add_filter_command(c: Client, m: Message):
             if m.reply_to_message.caption is not None
             else None
         )
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_animation(
             chat_id=CONFIG.filter_dump_chat,
             animation=file_id,
@@ -110,7 +111,7 @@ async def add_filter_command(c: Client, m: Message):
     elif m.reply_to_message and m.reply_to_message.sticker:
         file_id = m.reply_to_message.sticker.file_id
         raw_data = split_text[1] if len(split_text) > 1 else None
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_sticker(
             chat_id=CONFIG.filter_dump_chat,
             sticker=file_id,
@@ -120,7 +121,7 @@ async def add_filter_command(c: Client, m: Message):
         )
     else:
         raw_data = split_text[1]
-        data, button, alerts = button_markdown_parser(raw_data, trigger)
+        data, button, alerts = button_markdown_parser(raw_data, trigger, "filter")
         msg = await c.send_message(
             chat_id=CONFIG.filter_dump_chat,
             text=data,
@@ -285,12 +286,16 @@ async def serve_filter(c: Client, m: Message):
                 )
 
 
-@Client.on_callback_query(filters.regex("^alertmessage.*"))
+@Client.on_callback_query(filters.regex("^alert:.*"))
 async def alert_message(c: Client, m: CallbackQuery):
     chat = m.message.chat
-    query = m.data.split(":", 3)
-    alerts = find_filter_one(str(chat.id), query[2])
+    query = m.data.split(":", 4)
+    alerts = None
+    if query[1] == "filter":
+        alerts = find_filter_one(str(chat.id), query[3])
+    elif query[1] == "note":
+        alerts = find_one_note(str(chat.id), query[3])
     if alerts is not None:
-        alert = alerts.alerts[int(query[1])]
+        alert = alerts.alerts[int(query[2])]
         alert = alert.replace("\\n", "\n").replace("\\t", "\t")
         await m.answer(alert, show_alert=True)

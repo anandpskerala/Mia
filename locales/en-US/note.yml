@@ -1,0 +1,7 @@
+note_content_empty: 'Please specify a content for note.'
+successfully_added_note: 'Successfully added note **{trigger}** to **{chat_name}**.'
+all_notes_text: 'Total number of notes in **{chat_name}** : {count}\n\n'
+del_note_args_not_found: '__Mention the note which you wanna delete!__\n\n`/delnote notename`'
+successfully_deleted_note: "Successfully deleted `{note}`. I'll not respond to that note anymore."
+deleted_all_notes: 'Successfully deleted `{count}` notes'
+no_note_found: 'There is no note present found in this chat'

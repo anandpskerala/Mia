@@ -1,3 +1,5 @@
 no_url_found: 'No url found'
 shortened_url: 'Generated shortened link : {short_url} \n\nFor {url}.'
 something_wrong: 'Something is wrong. Please try again later.'
+unshortened_url: 'Inputed URL: {url}\nReDirected URL: {r_url}'
+unshorten_unsuccessful: 'Inputed URL {url} returned status_code {status}'
