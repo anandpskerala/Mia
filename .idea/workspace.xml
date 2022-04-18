@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a128728-ff4d-4a25-a9ae-6faba127079e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/locales/en-US/note.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ml/note.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/database/notes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/modules/notes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/en-US/greeting.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/greeting.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/database/welcome.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/modules/greetings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/en-US/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/help.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en-US/url.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/url.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/ml/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/help.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ml/url.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/url.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/modules/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/modules/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/misc.py" afterDir="false" />
     </list>
@@ -68,7 +65,15 @@
       <workItem from="1649683125826" duration="960000" />
       <workItem from="1649688229771" duration="358000" />
       <workItem from="1649770140183" duration="500000" />
-      <workItem from="1649824220003" duration="3628000" />
+      <workItem from="1649824220003" duration="4260000" />
+      <workItem from="1649841462063" duration="2105000" />
+      <workItem from="1649924255633" duration="581000" />
+      <workItem from="1649930717106" duration="2009000" />
+      <workItem from="1650026035578" duration="2735000" />
+      <workItem from="1650094646969" duration="2053000" />
+      <workItem from="1650110236772" duration="5593000" />
+      <workItem from="1650256416344" duration="3045000" />
+      <workItem from="1650281862978" duration="2719000" />
     </task>
     <servers />
   </component>

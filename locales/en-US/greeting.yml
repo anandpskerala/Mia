@@ -1,0 +1,15 @@
+welcome_content_empty: 'Please specify a content for welcome message.'
+successfully_added_welcome: 'Successfully added welcome message to **{chat_name}**.'
+set_clean_welcome: 'Successfully triggered clean welcome to `{args}`.'
+set_clean_service: 'Successfully triggered clean service to `{args}`.'
+set_welcome_state: 'Successfully set welcome state to `{args}.'
+welcome_settings: |
+  • Welcome State: {state}
+  • Clean Welcome: {clean_welcome}
+  • Clean service: {clean_service}
+wrong_arg_found: "I can understand 'on/yes' or 'off/no' only!"
+clean_welcome_on: "I'll be deleting old welcome messages"
+clean_welcome_off: "I'm currently not deleting old welcome messages"
+clean_service_on: "I'll be deleting service messages"
+clean_service_off: "I'm currently not deleting service messages"
+reset_welcome: "Successfully reseted welcome settings"

@@ -3,7 +3,8 @@ import time
 from typing import List
 from pyrogram.types import (
     Message,
-    InlineKeyboardButton
+    InlineKeyboardButton,
+    Chat
 )
 
 from mia import CONFIG
@@ -33,6 +34,49 @@ BTN_URL_REGEX = re.compile(
 SMART_OPEN = "“"
 SMART_CLOSE = "”"
 START_CHAR = ("'", '"', SMART_OPEN)
+
+
+DEFAULT_WELCOME_MESSAGES = [
+    "{first_name} is here!",
+    "Ready player {first_name}",
+    "Genos, {first_name} is here.",
+    "A wild {first_name} appeared.",
+    "{first_name} came in like a Lion!",
+    "{first_name} has joined your party.",
+    "{first_name} just joined. Can I get a heal?",
+    "{first_name} just joined the chat - asdgfhak!",
+    "{first_name} just joined. Everyone, look busy!",
+    "Welcome, {first_name}. Stay awhile and listen.",
+    "Welcome, {first_name}. We were expecting you ( ͡° ͜ʖ ͡°)",
+    "Welcome, {first_name}. We hope you brought pizza.",
+    "Welcome, {first_name}. Leave your weapons by the door.",
+    "Swoooosh. {first_name} just landed.",
+    "Brace yourselves. {first_name} just joined the chat.",
+    "{first_name} just joined. Hide your bananas.",
+    "{first_name} just arrived. Seems OP - please nerf.",
+    "{first_name} just slid into the chat.",
+    "A {first_name} has spawned in the chat.",
+    "Big {first_name} showed up!",
+    "Where’s {first_name}? In the chat!",
+    "{first_name} hopped into the chat. Kangaroo!!",
+    "{first_name} just showed up. Hold my beer.",
+    "Challenger approaching! {first_name} has appeared!",
+    "It's a bird! It's a plane! Nevermind, it's just {first_name}.",
+    "It's {first_name}! Praise the sun! \o/",
+    "Never gonna give {first_name} up. Never gonna let {first_name} down.",
+    "Ha! {first_name} has joined! You activated my trap card!",
+    "Cheers, love! {first_name}'s here!",
+    "Hey! Listen! {first_name} has joined!",
+    "We've been expecting you {first_name}",
+    "It's dangerous to go alone, take {first_name}!",
+    "{first_name} has joined the chat! It's super effective!",
+    "Cheers, love! {first_name} is here!",
+    "{first_name} is here, as the prophecy foretold.",
+    "{first_name} has arrived. Party's over.",
+    "{first_name} is here to kick butt and chew bubblegum. And {first_name} is all out of gum.",
+    "Hello. Is it {first_name} you're looking for?",
+    "{first_name} has joined. Stay a while and listen!",
+]
 
 
 def button_markdown_parser(msg: str, keyword: str, typo: str):
@@ -97,15 +141,17 @@ def button_markdown_parser(msg: str, keyword: str, typo: str):
     return note_data, buttons, alerts if len(alerts) != 0 else None
 
 
-def format_welcome_caption(html_string, chat_member, chat):
-    return html_string.format(
+def format_welcome_caption(md_string, chat_member, chat: Chat):
+    return md_string.format(
         dc_id=chat_member.dc_id,
         first_name=chat_member.first_name,
         id=chat_member.id,
-        last_name=chat_member.last_name,
+        last_name=chat_member.last_name or chat_member.first_name,
         mention=chat_member.mention,
         username=chat_member.username,
-        chatname=chat.title
+        chatname=chat.title,
+        fullname=f'{chat_member.first_name} {chat_member.last_name}',
+        count=chat.members_count
     )
 
 
@@ -163,3 +209,30 @@ def check_for_notes(chat_id: str, trigger: str):
         if trigger == keyword:
             return True
     return False
+
+
+def get_file_id(msg):
+    content = None
+    if msg.media:
+        if msg.sticker:
+            content = msg.sticker.file_id
+
+        elif msg.document:
+            content = msg.document.file_id
+
+        elif msg.photo:
+            content = msg.photo.file_id
+
+        elif msg.audio:
+            content = msg.audio.file_id
+
+        elif msg.voice:
+            content = msg.voice.file_id
+
+        elif msg.video:
+            content = msg.video.file_id
+
+        elif msg.video_note:
+            content = msg.video_note.file_id
+
+    return content

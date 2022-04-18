@@ -1,0 +1,15 @@
+welcome_content_empty: 'സ്വാഗത സന്ദേശത്തിന് ഒരു ഉള്ളടക്കം വ്യക്തമാക്കുക.'
+successfully_added_welcome: '**{chat_name}** - ലേക്ക് സ്വാഗത സന്ദേശം വിജകരമായി ചേർത്തു.'
+set_clean_welcome: '`{args}`-ലേക്ക് ക്ലീൻ സ്വാഗതം ട്രിഗർ ചെയ്തു.'
+set_clean_service: '`{args}`-ലേക്ക് ക്ലീൻ സേവനം ട്രിഗർ ചെയ്തു.'
+set_welcome_state: 'സ്വാഗത സന്ദേശം `{args}` - ലേക്ക് സജ്ജീകരിച്ചു.'
+welcome_settings: |
+  • സ്വാഗത സന്ദേശം: {state}
+  • ക്ലീൻ സ്വാഗതം: {clean_welcome}
+  • ക്ലീൻ സേവനം: {clean_service}
+wrong_arg_found: "എനിക്ക് 'on/yes' അല്ലെങ്കിൽ 'off/no' മാത്രമേ മനസ്സിലാകൂ!"
+clean_welcome_on: "ഞാൻ പഴയ സ്വാഗത സന്ദേശങ്ങൾ ഇല്ലാതാകുന്നതാണ്"
+clean_welcome_off: "ഞാൻ നിലവിൽ പഴയ സ്വാഗത സന്ദേശങ്ങൾ ഇല്ലാതാക്കുന്നില്ല"
+clean_service_on: "ഞാൻ സേവന സന്ദേശങ്ങൾ ഇല്ലാതാകുന്നതാണ്"
+clean_service_off: "ഞാൻ നിലവിൽ സേവന സന്ദേശങ്ങൾ ഇല്ലാതാക്കുന്നില്ല"
+reset_welcome: "സ്വാഗത ക്രമീകരണങ്ങൾ പുനഃക്രമീകരിച്ചു"

@@ -6,6 +6,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, CallbackQuery
 from mia import CONFIG
 from mia.database.filters import add_filter, get_all_filters, count_filters, delete_filter, delete_all_filters, find_filter_one
 from mia.database.notes import find_one_note
+from mia.database.welcome import get_welcome
 from mia.modules.localization import tl
 from mia.utils import split_quotes, admin_check, button_markdown_parser, check_for_filters, chat_owner_only
 
@@ -295,6 +296,8 @@ async def alert_message(c: Client, m: CallbackQuery):
         alerts = find_filter_one(str(chat.id), query[3])
     elif query[1] == "note":
         alerts = find_one_note(str(chat.id), query[3])
+    elif query[1] == "greeting":
+        alerts = get_welcome(str(chat.id))
     if alerts is not None:
         alert = alerts.alerts[int(query[2])]
         alert = alert.replace("\\n", "\n").replace("\\t", "\t")
