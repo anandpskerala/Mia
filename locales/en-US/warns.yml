@@ -1,0 +1,4 @@
+warn_user_text: '{mention} has {num_warns}/{warn_limit} warnings... watch out!'
+warn_user_text_reason: '\n\nReason for last warn:\n{reason}'
+remove_warn_button: 'Remove warn'
+warning_removed: '{admin} removed the warning for {user}'

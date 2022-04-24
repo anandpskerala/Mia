@@ -1,0 +1,4 @@
+warn_user_text: '{mention}-ക്ക് {num_warns}/{warn_limit} മുന്നറിയിപ്പുകളുണ്ട്... ശ്രദ്ധിക്കുക!'
+warn_user_text_reason: '\n\nഅവസാന മുന്നറിയിപ്പിനുള്ള കാരണം:\n{reason}'
+remove_warn_button: 'മുന്നറിയിപ്പ് നീക്കം ചെയ്യുക'
+warning_removed: '{user} - ന്റെ Warning {admin} നീക്കം ചെയ്തു'

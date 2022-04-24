@@ -1,6 +1,8 @@
 import re
 import time
 from typing import List
+
+from pyrogram import Client
 from pyrogram.types import (
     Message,
     InlineKeyboardButton,
@@ -18,6 +20,7 @@ from mia import CONFIG
 # else, escape *, _, `, and [
 from mia.database.filters import get_all_filters
 from mia.database.notes import get_all_notes
+from mia.modules.localization import tl
 
 MATCH_MD = re.compile(r'\*(.*?)\*|'
                       r'_(.*?)_|'
@@ -236,3 +239,38 @@ def get_file_id(msg):
             content = msg.video_note.file_id
 
     return content
+
+
+async def get_user_and_text(c: Client, m: Message):
+    if m.reply_to_message:
+        user = m.reply_to_message.from_user
+        if len(m.command) > 1:
+            reason = m.text.split(maxsplit=1)[1]
+        else:
+            reason = None
+    else:
+        if len(m.command) > 2:
+            args = m.text.split(maxsplit=2)
+            if args[1].isdecimal():
+                user = await c.get_users(int(args[1]))
+            else:
+                await m.reply_text(
+                    tl(m.chat.id, "no_user_found")
+                )
+                user = None
+            reason = args[2]
+        elif len(m.command) > 1:
+            args = m.text.split(maxsplit=1)
+            if args[1].isdecimal():
+                user = await c.get_users(int(args[1]))
+            else:
+                await m.reply_text(
+                    tl(m.chat.id, "no_user_found")
+                )
+                user = None
+            reason = None
+        else:
+            user = None
+            reason = None
+
+    return user, reason

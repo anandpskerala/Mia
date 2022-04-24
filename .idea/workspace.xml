@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a128728-ff4d-4a25-a9ae-6faba127079e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/locales/en-US/greeting.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/locales/ml/greeting.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/database/welcome.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mia/modules/greetings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/en-US/warns.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locales/ml/warns.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/database/warns.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mia/modules/warns.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en-US/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/general.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/en-US/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en-US/help.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ml/general.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/general.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/ml/help.yml" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ml/help.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mia/modules/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mia/modules/notes.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/modules/notes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mia/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/mia/utils/misc.py" afterDir="false" />
     </list>
@@ -21,6 +23,13 @@
   <component name="FileColors">
     <fileColor scope="All" color="Rose" />
     <fileColor scope="Project Files" color="00ff25" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +82,11 @@
       <workItem from="1650094646969" duration="2053000" />
       <workItem from="1650110236772" duration="5593000" />
       <workItem from="1650256416344" duration="3045000" />
-      <workItem from="1650281862978" duration="2719000" />
+      <workItem from="1650281862978" duration="3278000" />
+      <workItem from="1650360932983" duration="1689000" />
+      <workItem from="1650631625571" duration="3395000" />
+      <workItem from="1650772447380" duration="3049000" />
+      <workItem from="1650780018000" duration="5191000" />
     </task>
     <servers />
   </component>

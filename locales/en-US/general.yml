@@ -30,3 +30,5 @@ help_text: |
   If you have any bugs or questions on how to use me, head to @KeralasBots.
   
   All commands can be used with the following: / !
+
+no_user_found: "No idea who this user is. Can't warn this user"

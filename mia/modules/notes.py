@@ -217,7 +217,7 @@ async def serve_notes(c: Client, m: Message):
     text = m.text
     targeted_message = m.reply_to_message or m
 
-    f_word = m.text.split()[0]
+    f_word = text.split()[0]
     no_hash = f_word[1:]
     note = find_one_note(str(chat_id), no_hash)
     if note:
