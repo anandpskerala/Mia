@@ -31,4 +31,4 @@ help_text: |
   
   All commands can be used with the following: / !
 
-no_user_found: "No idea who this user is. Can't warn this user"
+no_user_found: "I have no idea who this user is."
